@@ -18,7 +18,7 @@ def display_slide(svsfile):
     y1, y2 = 10000, 19000
 
     # Display the Region of interest
-    ROI_dim = dims[0]  # this images has only 1 dimension/level
+    ROI_dim = dims[0]  
     ROI_img = slide.read_region((0, 0), 0, (x2, y2), as_array=True)
     ROI_img = Image.fromarray(ROI_img[y1:y2, x1:x2, :])
     ROI_img_RGB = ROI_img.convert('RGB')
